@@ -45,7 +45,6 @@
   <ItemGroup>
     <Compile Include="AiPlayer.cs" />
     <Compile Include="Game.cs" />
-    <Compile Include="Gesture.cs" />
     <Compile Include="HumanPlayer.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="Program.cs" />

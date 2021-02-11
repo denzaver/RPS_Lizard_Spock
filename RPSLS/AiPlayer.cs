@@ -6,7 +6,13 @@ using System.Threading.Tasks;
 
 namespace RPSLS
 {
-    class AiPlayer
+    class AiPlayer : Player
     {
+        // Member Variables
+
+        // Constructor
+
+        // Member Methods
+
     }
 }
