@@ -11,6 +11,10 @@ namespace RPSLS
         // Member Variables
 
         // Constructor
+        public AiPlayer(string name)
+        {
+            this.name = name;
+        }
 
         // Member Methods
 

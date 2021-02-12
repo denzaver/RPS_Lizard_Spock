@@ -48,7 +48,6 @@ namespace RPSLS
         public void PlayerSelect()
         {
 
-
             Console.WriteLine("Enter 1 for Single Player mode, enter 2 for multiplayer mode.");
             int userInput = Convert.ToInt32(Console.ReadLine());
             string player1name = Player1ChooseName();
@@ -57,9 +56,9 @@ namespace RPSLS
             if (userInput == 1)
             {
                 //create p2
-                player2 = new AiPlayer();
-                Console.WriteLine("You are playing against Michael Scott! Prepare for an ass whooping! \n" +
-                    " - 'thats what she said'");
+                string aiPlayerName = AiPlayerChooseName();
+                player2 = new AiPlayer(aiPlayerName);
+
             }
             else
             {
@@ -84,6 +83,15 @@ namespace RPSLS
             Console.WriteLine($"Player2 name is {player2Input}");
 
             return player2Input;
+        }
+
+        public string AiPlayerChooseName()
+        {
+            Console.WriteLine("What is your opponents name?:");
+            string aiNameInput = Console.ReadLine();
+            Console.WriteLine($"You are now facing of with {aiNameInput}...  prepare be destoyed!!!");
+            
+            return aiNameInput;
         }
 
         // if single player, need a method for human V Ai attacks
