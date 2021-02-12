@@ -10,11 +10,16 @@ namespace RPSLS
     {
 
         // Member Variables
+        public HumanPlayer human;
+        public AiPlayer ai;
+
 
 
         // Constructor
         public Game()
         {
+            human = new HumanPlayer();
+            ai = new AiPlayer();
 
         }
 
@@ -60,7 +65,17 @@ namespace RPSLS
 
 
         }
-        public void ChooseName()
+        public string Player1ChooseName()
+        {
+            Console.WriteLine("Please enter your: ");
+            Console.ReadLine();
+            string player1Input = Console.ReadLine();
+
+            return player1Input;
+        }
+
+
+        public string Player2ChooseName()
         {
 
         }
