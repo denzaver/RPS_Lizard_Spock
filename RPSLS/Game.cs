@@ -21,6 +21,12 @@ namespace RPSLS
 
         // Memeber Methods 
 
+
+        public void RunGame()
+        {
+            Weclome();
+
+        }
         public void Weclome()
         {
             Console.WriteLine("Welcome to 'Rock, Paper, Siccors, Lizard, Spock!");
@@ -36,6 +42,32 @@ namespace RPSLS
                 "Paper discproves Spock, \n" +
                 "Spock vaporizes Rock.");
         }
+
+        public void PlayerSelect()
+        {
+            Console.WriteLine("Enter 1 for Single Player mode, enter 2 for multiplayer mode.");
+            int userInput = Convert.ToInt32(Console.ReadLine());
+            if (userInput == 1)
+            {
+                Console.WriteLine();
+            }
+            else
+            {
+
+            }
+
+
+
+
+        }
+        public void ChooseName()
+        {
+
+        }
+
+        // if single player, need a method for human V Ai attacks
+        // if human v human need method for human V human ATTACK 
+        // Will these methods be called in the PlayerSelect method???
 
     }
 }

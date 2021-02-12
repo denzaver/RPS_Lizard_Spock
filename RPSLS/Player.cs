@@ -23,9 +23,10 @@ namespace RPSLS
             gesture.Add("lizard");
             gesture.Add("spock");
 
-
         }
 
         // Member Methods
+
+
     }
 }
