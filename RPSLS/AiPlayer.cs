@@ -14,5 +14,10 @@ namespace RPSLS
 
         // Member Methods
 
+        public override void ChooseGesture()  
+        {
+
+        }
+
     }
 }

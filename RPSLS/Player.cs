@@ -27,6 +27,9 @@ namespace RPSLS
 
         // Member Methods
 
+        public virtual void ChooseGesture()  // the Human player CAN choose a gesture  
+        {
 
+        }
     }
 }

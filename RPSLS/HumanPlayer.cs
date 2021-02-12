@@ -11,15 +11,15 @@ namespace RPSLS
         // Member Variables
 
         // Constructor
-        public HumanPlayer(string name, string choice)
+        public HumanPlayer(string name)
         {
             this.name = name;
-            this.choice = choice;
+            
         }
 
         // Member Methods (CAN DO)
 
-        public void ChooseGesture()  // the Human player CAN choose a gesture 
+        public override void ChooseGesture()  // the Human player CAN choose a gesture  
         {
 
         }

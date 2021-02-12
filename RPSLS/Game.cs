@@ -10,27 +10,24 @@ namespace RPSLS
     {
 
         // Member Variables
-        public HumanPlayer human;
-        public AiPlayer ai;
+        public Player player1;
+        public Player player2;
 
 
 
         // Constructor
         public Game()
         {
-            human = new HumanPlayer();
-            ai = new AiPlayer();
-
+            //human = new HumanPlayer("John", "Rock");
+            //ai = new AiPlayer();
         }
 
-
         // Memeber Methods 
-
 
         public void RunGame()
         {
             Weclome();
-
+            PlayerSelect();
         }
         public void Weclome()
         {
@@ -46,38 +43,47 @@ namespace RPSLS
                 "Lizard eats paper, \n" +
                 "Paper discproves Spock, \n" +
                 "Spock vaporizes Rock.");
-        }
+        } 
 
         public void PlayerSelect()
         {
+
+
             Console.WriteLine("Enter 1 for Single Player mode, enter 2 for multiplayer mode.");
             int userInput = Convert.ToInt32(Console.ReadLine());
+            string player1name = Player1ChooseName();
+            player1 = new HumanPlayer(player1name);
+            
             if (userInput == 1)
             {
-                Console.WriteLine();
+                //create p2
+                player2 = new AiPlayer();
+                Console.WriteLine("You are playing against Michael Scott! Prepare for an ass whooping! \n" +
+                    " - 'thats what she said'");
             }
             else
             {
-
+                string player2name = Player2ChooseName();
+                player2 = new HumanPlayer(player2name);
             }
-
-
-
-
         }
+
         public string Player1ChooseName()
         {
             Console.WriteLine("Please enter your: ");
-            Console.ReadLine();
             string player1Input = Console.ReadLine();
-
+            Console.WriteLine("Player1 name is {0}", player1Input);
+            
             return player1Input;
         }
 
-
         public string Player2ChooseName()
         {
+            Console.WriteLine("Player 2 enter your name:");
+            string player2Input = Console.ReadLine();
+            Console.WriteLine($"Player2 name is {player2Input}");
 
+            return player2Input;
         }
 
         // if single player, need a method for human V Ai attacks
