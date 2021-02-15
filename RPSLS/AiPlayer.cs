@@ -9,16 +9,26 @@ namespace RPSLS
     class AiPlayer : Player
     {
         // Member Variables
+        Random random;
 
         // Constructor
         public AiPlayer(string name)
         {
             this.name = name;
+            random = new Random();
         }
 
         // Member Methods
 
         public override void ChooseGesture()  
+        {
+            
+
+        }
+
+        
+
+        public  void PlayerScore()
         {
 
         }

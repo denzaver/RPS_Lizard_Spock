@@ -28,6 +28,7 @@ namespace RPSLS
         {
             Weclome();
             PlayerSelect();
+
         }
         public void Weclome()
         {
@@ -94,9 +95,19 @@ namespace RPSLS
             return aiNameInput;
         }
 
-        // if single player, need a method for human V Ai attacks
-        // if human v human need method for human V human ATTACK 
-        // Will these methods be called in the PlayerSelect method???
+        public void Play()
+        {
+            // while player ones score and player twos score is less than 3, continue the loop
+            while (player1.score < 3)
+            {
+                // Make each palyer make their choice
+                // Then comparethe gestures and increemnt the winning players score (compare gesture should be its own method)
+            }
+        }
+
+
+
+        // Need to decide on how many rounds there wil lbe
 
     }
 }

@@ -6,11 +6,14 @@ using System.Threading.Tasks;
 
 namespace RPSLS
 {
-    class Player
+
+    // Make this class an abstract class
+    public abstract class Player
     {
         // Member Variables
         public string name;
         public string choice;
+        public int score;
         public List<string> gesture;
 
         // Constructor
@@ -27,9 +30,12 @@ namespace RPSLS
 
         // Member Methods
 
-        public virtual void ChooseGesture()  // the Human player CAN choose a gesture  
-        {
 
-        }
+        // Make this method and abstract method signature. 
+        // That will force the children classes to implement this method in their own way
+        public abstract void ChooseGesture(); 
+
+
+
     }
 }

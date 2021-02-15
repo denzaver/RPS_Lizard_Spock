@@ -11,9 +11,14 @@ namespace RPSLS
         static void Main(string[] args)
         {
             Game game = new Game();
-            game.PlayerSelect();
+            //game.PlayerSelect();
             //game.Player1ChooseName();
             //game.RunGame();
+
+            HumanPlayer player = new HumanPlayer("john");
+            player.ChooseGesture();
+
+
             Console.ReadLine();
         }
     }
