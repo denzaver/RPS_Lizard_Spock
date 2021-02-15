@@ -20,10 +20,12 @@ namespace RPSLS
 
         // Member Methods
 
-        public override void ChooseGesture()  
+        public override string ChooseGesture()  
         {
-            
+            int randomChoice = random.Next(gesture.Count);
+            Console.WriteLine($" AI Player {name} has played {gesture[randomChoice]}");
 
+            return gesture[randomChoice];
         }
 
         

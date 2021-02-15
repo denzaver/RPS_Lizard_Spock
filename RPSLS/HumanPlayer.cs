@@ -19,7 +19,7 @@ namespace RPSLS
 
         // Member Methods (CAN DO)
 
-        public override void ChooseGesture()  // do i need to return the response? i dont need 
+        public override string ChooseGesture()  // do i need to return the response? i dont need 
                                                     //to because its all happening within this class adn method?
 
         {
@@ -29,7 +29,7 @@ namespace RPSLS
                 Console.WriteLine($"Press {i} for {gesture[i]}");
             }
             string playerInput = Console.ReadLine();
-            int convertedRespnse = Convert.ToInt32(playerInput);
+            return playerInput;
 
 
         }

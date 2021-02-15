@@ -15,8 +15,12 @@ namespace RPSLS
             //game.Player1ChooseName();
             //game.RunGame();
 
-            HumanPlayer player = new HumanPlayer("john");
-            player.ChooseGesture();
+            //HumanPlayer player = new HumanPlayer("john");
+            //player.ChooseGesture();
+
+            AiPlayer ai = new AiPlayer("not you");
+            ai.ChooseGesture();
+
 
 
             Console.ReadLine();

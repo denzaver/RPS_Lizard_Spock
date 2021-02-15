@@ -33,7 +33,7 @@ namespace RPSLS
 
         // Make this method and abstract method signature. 
         // That will force the children classes to implement this method in their own way
-        public abstract void ChooseGesture(); 
+        public abstract string ChooseGesture(); 
 
 
 
