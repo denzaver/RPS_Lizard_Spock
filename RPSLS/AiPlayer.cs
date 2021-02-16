@@ -16,15 +16,16 @@ namespace RPSLS
         {
             this.name = name;
             random = new Random();
+            choice = ChooseGesture();
         }
 
-        // Member Methods
+        // Member Methods (CAN DO)
 
-        public override string ChooseGesture()  
+        public override string  ChooseGesture()  
         {
             int randomChoice = random.Next(gesture.Count);
             Console.WriteLine($" AI Player {name} has played {gesture[randomChoice]}");
-
+            Console.WriteLine(randomChoice);
             return gesture[randomChoice];
         }
 

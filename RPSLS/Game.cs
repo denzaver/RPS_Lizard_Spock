@@ -38,7 +38,7 @@ namespace RPSLS
                 "Scissors cuts Paper, \n" +
                 "Paper covers Rock, \n" +
                 "Rock crushes Lizard, \n" +
-                "Lizard poisons Spcok, \n" +
+                "Lizard poisons Spock, \n" +
                 "Spock smashes Scissors, \n" +
                 "Scissors decapitates Lizard, \n" +
                 "Lizard eats paper, \n" +
@@ -98,14 +98,79 @@ namespace RPSLS
         public void Play()
         {
             // while player ones score and player twos score is less than 3, continue the loop
-            while (player1.score < 3)
+            while (player1.score < 3 && player2.score < 3)
             {
+                player1.ChooseGesture();
                 // Make each palyer make their choice
+                CompareGesture();
                 // Then comparethe gestures and increemnt the winning players score (compare gesture should be its own method)
             }
         }
 
+        public void CompareGesture()
+        {
 
+            if(player1.choice == "rock" && player2.choice == "paper")
+            {
+                Console.WriteLine($"{player2.name} wins!");
+                player2.score++;
+            }
+            else if (player1.choice == "rock" && player2.choice == "scissors")
+            {
+                Console.WriteLine($"{player1.name} wins!");
+                player1.score++;
+            }
+            else if (player1.choice == "rock" && player2.choice == "lizard")
+            {
+                Console.WriteLine($"{player1.name} wins!");
+                player1.score++;
+            }
+            else if (player1.choice == "rock" && player2.choice == "spock")
+            {
+                Console.WriteLine($"{player2.name} wins!");
+                player2.score++;
+            }
+            else if (player1.choice == "paper" && player2.choice == "rock")
+            {
+                Console.WriteLine($"{player1.name} wins!");
+                player1.score++;
+            }
+            else if (player1.choice == "paper" && player2.choice == "scissors")
+            {
+                Console.WriteLine($"{player2.name}");
+                player2.score++;
+            }
+            else if (player1.choice == "paper" && player2.choice == "lizard")
+            {
+                Console.WriteLine($"{player2.name}");
+                player2.score++;
+            }
+            else if (player1.choice == "paper" && player2.choice == "spock")
+            {
+                Console.WriteLine($"{player1.name} wins!");
+                player1.score++;
+            }
+            else if (player1.choice == "scissors" && player2.choice == "rock")
+            {
+                Console.WriteLine($"{player2.name} wins!");
+                player2.score++;
+            }
+            else if (player1.choice == "scissors" && player2.choice == "paper")
+            {
+                Console.WriteLine($"{player1.name} wins!");
+                player1.score++;
+            }
+            else if (player1.choice == "scissors" && player2.choice == "lizard")
+            {
+                Console.WriteLine($"{player1.name} wins!");
+                player1.score++;
+            }
+            else if (player1.choice == "scissors" && player2.choice == "spock")
+            {
+                Console.WriteLine($"{player2.name} wins!");
+                player2.score++;
+            }
+        }
 
         // Need to decide on how many rounds there wil lbe
 

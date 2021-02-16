@@ -18,7 +18,7 @@ namespace RPSLS
             //HumanPlayer player = new HumanPlayer("john");
             //player.ChooseGesture();
 
-            AiPlayer ai = new AiPlayer("not you");
+            AiPlayer ai = new AiPlayer("joe");
             ai.ChooseGesture();
 
 
